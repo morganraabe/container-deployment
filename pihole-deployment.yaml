@@ -15,4 +15,4 @@ spec:
       - name: pihole
         image: pihole/pihole:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8000

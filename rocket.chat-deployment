@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rocket.chat-deployment
+  labels:
+    app: rocket.chat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rocket.chat
+  template:
+    metadata:
+      labels:
+        app: rocket.chat
+    spec:
+      containers:
+      - name: rocket.chat
+        image:rocket.chat:latest
+        ports:
+        - containerPort: 8005

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: univentionCS-deployment
+  labels:
+    app: univention-corporate-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: univention-corporate-server
+  template:
+    metadata:
+      labels:
+        app: univention-corporate-server
+    spec:
+      containers:
+      - name: univention-corporate-server
+        image: univention/univention-corporate-server:latest
+        ports:
+        - containerPort: 8006

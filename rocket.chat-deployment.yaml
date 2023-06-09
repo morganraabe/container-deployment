@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: rocket.chat
-        image:rocket.chat:latest
+        image: rocket.chat:latest
         ports:
         - containerPort: 8005

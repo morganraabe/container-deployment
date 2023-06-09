@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: kali-deployment
   labels:
-    app: kalilinux
+    app: kali-rolling
 spec:
   replicas: 8
   selector:
     matchLabels:
-      app: kalilinux
+      app: kali-rolling
   template:
     metadata:
       labels:
-        app: kalilinux
+        app: kali-rolling
     spec:
       containers:
       - name: kalilinux/kali-rolling

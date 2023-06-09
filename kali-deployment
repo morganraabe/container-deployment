@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kali-deployment
+  labels:
+    app: kalilinux
+spec:
+  replicas: 8
+  selector:
+    matchLabels:
+      app: kalilinux
+  template:
+    metadata:
+      labels:
+        app: kalilinux
+    spec:
+      containers:
+      - name: kalilinux/kali-rolling
+        image: kalilinux/kali-rolling:latest
+        ports:
+        - containerPort: 8004

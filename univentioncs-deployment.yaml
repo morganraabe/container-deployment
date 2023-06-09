@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: univentionCS-deployment
+  name: univention-corporate-server-deployment
   labels:
     app: univention-corporate-server
 spec:
